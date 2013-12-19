@@ -1,0 +1,39 @@
+<template name="welcomeView">
+
+  <div class="welcome-main">
+
+    <div class="page-header">
+      <h1>Welcome to school <small>{{userName}}</small></h1>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading large">
+	<span class="glyphicon glyphicon-book"></span> Homework
+      </div>
+      <div class="panel-body">
+	Homeworks ...
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading large">
+	<span class="glyphicon glyphicon-inbox"></span> Conversations
+      </div>
+      <div class="panel-body">
+	Conversations ...
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading large">
+	<span class="glyphicon glyphicon-globe"></span> Classes
+      </div>
+      <div class="panel-body">
+	Classes ...
+      </div>
+    </div>
+
+  </div>
+
+
+</template>

@@ -1,0 +1,2 @@
+var mouseDownTarget;
+var mouseMoveTarget;

@@ -1,0 +1,7 @@
+.welcome-main {
+    margin: 50px;
+}
+
+.panel-primary > .panel-heading.large {
+    font-size: 18px;
+}

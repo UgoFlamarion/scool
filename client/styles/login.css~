@@ -1,0 +1,36 @@
+.login-box {
+    position:absolute;
+    height:auto;
+    top:0px;
+    bottom:0px;
+    width:100%;
+    vertical-align: middle;
+    margin: auto;
+    display: table;
+    text-align: center;
+    //margin-top: 0px;
+}
+
+.login-form {
+    display: table-cell;
+    text-align: center;
+    display: inline-block;
+    width: 400px;
+}
+
+.login-form > form {
+    margin-bottom: 50px;
+}
+
+.login-form > .page-header {
+    text-align: left;
+}
+
+
+input.form-control {
+    width: 300px;
+}
+
+.stick-left {
+    float: left;
+}

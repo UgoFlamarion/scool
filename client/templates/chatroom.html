@@ -1,0 +1,86 @@
+<!-- Main Chat Window -->
+<template name='mainBox'>
+  <div class='container'>
+    <h2>How often do you Pangolin ?</h2>
+    <!-- shows login buttons -->
+    {{loginButtons}}
+    {{> chatBox}}
+  </div>
+</template>
+
+<!-- Chat Box with chat messages and the input box -->
+<template name="chatBox">
+  <div id='messages' class='message-box'>
+    {{#each messages}}
+    {{>chatMessage}}
+    {{/each}}
+  </div>
+  <div class='message-input'>
+    <table>
+      <tr>
+	<td>
+	  <button class='btn btn-primary btn-send' id='send'>Send Chat</button>
+	</td>
+	<td>
+	  <input id='chat-message' class='chat-message'></input>
+	</td>
+      </tr>
+    </table>
+  </div>
+
+  {{> addCorrectionModal}}
+
+</template>
+
+<!-- Template for the individual chat message -->
+<template name="chatMessage">
+  {{#if selected}}
+  <div id='chat-message-{{_id}}'  
+       class='chat-message selected'
+       {{#if correction}}
+       data-content="{{correction}}"
+       data-original-title="Correction"
+       data-placement="auto"
+       trigger="manual"{{/if}}>
+    {{else}}
+    <div id='chat-message-{{_id}}'  
+	 class='chat-message {{#if mark}}marked{{/if}}'>
+      {{/if}}
+      <i>{{sent_on}}</i>
+      <b>{{user}}:</b>
+      <span id="chat-message-text-{{_id}}" class="chat-message-text">
+	{{{parsedMessageText}}}
+      </span>
+      {{#if selected}}
+      <div class="correction-btn-panel">
+	<button id="correct" type="button" class="btn btn-primary">Correct</button>
+      </div>
+      {{/if}} 
+    </div>
+</template>
+
+<template name="addCorrectionModal">
+
+  <div class="modal fade" id="add-correction-modal" tabindex="-1" role="dialog" aria-labelledby="correctionModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+	<div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Add a correction</h4>
+	</div>
+	<div class="modal-body">
+	  <form role="form">
+	    <div class="form-group">
+	      <textarea class="form-control correction" rows="3" placeholder="Your correction's description here"></textarea>
+	    </div>
+	  </form>
+	</div>
+	<div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="save-btn" type="button" class="btn btn-primary">Save</button>
+	</div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+
+</template>

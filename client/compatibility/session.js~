@@ -1,0 +1,6 @@
+function clearEventSessionValues() {
+	Session.set("selected", Template.chatMessage.selected);
+	Session.set("selectionFromIndex", Math.min(mouseDownTargetIndex, mouseUpTargetIndex));
+	Session.set("selectionToIndex", Math.max(mouseDownTargetIndex, mouseUpTargetIndex));
+
+}

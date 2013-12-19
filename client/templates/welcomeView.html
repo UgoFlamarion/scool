@@ -1,0 +1,57 @@
+<template name="welcomeView">
+
+  <div class="welcome-main">
+
+    <div class="page-header">
+      <h1>Welcome to school <small>{{userName}}</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="logout-btn" type="button" class="btn btn-default"> <span class="glyphicon glyphicon-log-out" /> Log out</button></h1>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading large">
+	<span class="glyphicon glyphicon-book"></span> Homework
+      </div>
+      <div class="panel-body">
+	{{>homeworkList}}
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading large">
+	<span class="glyphicon glyphicon-inbox"></span> Conversations
+      </div>
+      <div class="panel-body">
+	{{>conversationsList}}
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading large">
+	<span class="glyphicon glyphicon-globe"></span> Classes
+      </div>
+      <div class="panel-body">
+	{{>classRoomsList}}
+      </div>
+    </div>
+
+  </div>
+
+</template>
+
+<template name="homeworkList">
+  Homework ...
+</template>
+
+<template name="conversationsList">
+  Conversations ...
+</template>
+
+<template name="classRoomsList">
+  <ul class="list-group">
+    {{#each classRooms}}
+    <li class="list-group-item">
+	{{title}}<a class="btn btn-default enter-class-link" href="/classroom/{{_id}}"><span class="glyphicon glyphicon-arrow-right" /></a>
+    </li>
+    {{/each}}
+</ul>
+
+</template>
