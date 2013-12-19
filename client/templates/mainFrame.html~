@@ -1,9 +1,0 @@
-<template name="mainFrame">
-  <head>
-    <title>Scool yo !</title>
-  </head>
-
-  <body>
-    {{yield}}
-  </body>
-</template>

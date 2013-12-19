@@ -1,5 +1,0 @@
-Template.welcomeView.helpers({
-    'userName': function() {
-	return Meteor.user()['username'];
-    }
-});
