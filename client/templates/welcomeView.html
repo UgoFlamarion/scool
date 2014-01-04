@@ -1,11 +1,5 @@
 <template name="welcomeView">
 
-  <div class="welcome-main">
-
-    <div class="page-header">
-      <h1>Welcome to school <small>{{userName}}</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="logout-btn" type="button" class="btn btn-default"> <span class="glyphicon glyphicon-log-out" /> Log out</button></h1>
-    </div>
-
     <div class="panel panel-primary">
       <div class="panel-heading large">
 	<span class="glyphicon glyphicon-book"></span> Homework
@@ -26,14 +20,12 @@
 
     <div class="panel panel-primary">
       <div class="panel-heading large">
-	<span class="glyphicon glyphicon-globe"></span> Classes
+	<span class="glyphicon glyphicon-globe"></span> Classrooms
       </div>
       <div class="panel-body">
 	{{>classRoomsList}}
       </div>
     </div>
-
-  </div>
 
 </template>
 

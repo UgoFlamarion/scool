@@ -1,0 +1,24 @@
+<template name="classroom">
+  
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{classroom.title}}
+      <div class="pull-right">
+	<a href="/"><span class="glyphicon glyphicon-circle-arrow-left"/> Back</a>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="panel-body">
+      <div class="classroom-list">
+	{{#if classroom}}
+	{{#with classroom}}
+	{{#each students}}
+	{{{userPicture this}}}
+	{{/each}}
+	{{/with}}
+	{{/if}}
+      </div>
+    </div>
+  </div>
+</template>

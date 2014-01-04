@@ -1,0 +1,24 @@
+.avatar {
+    width: 128px;
+    height: 128px;
+    text-align: center;
+}
+
+.avatar img {
+    width: 128px;
+    height: 128px;
+}
+
+.avatar span {
+    table-layout: fixed;
+    word-wrap: break-word;
+    width: 90px;
+    float: left;
+    margin: 0 18px;
+}
+
+.classroom-list {
+    vertical-align: top;
+    display: flex;
+    padding-bottom: 50px;
+}

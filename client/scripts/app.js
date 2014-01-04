@@ -23,6 +23,15 @@ Router.map(function () {
 	template: 'mainBox'
     });
 
+    this.route('classroom', {
+	path: '/classroom/:classroom_id',
+	template: 'classroom',
+
+	before: function() {
+	    Session.set('classroom_id', this.params.classroom_id);
+	}
+    });
+
 });
 
 Router.before(function() {
